@@ -32,7 +32,7 @@
 # Arguments to pass tmux when pulling Repositories
 # tmux_arguments = "-S /var/tmux.sock"
 
-# Do not set the terminal title (default: true)
+# Set the terminal title (default: true)
 # set_title = true
 
 # Display the time in step titles (default: true)
@@ -69,10 +69,8 @@
 # only = ["system", "emacs"]
 
 # Whether to self update
-#
 # this will be ignored if the binary is built without self update support
-#
-# available also via setting the environment variable TOPGRADE_NO_SELF_UPGRADE)
+# available also via setting the environment variable TOPGRADE_NO_SELF_UPGRADE
 # no_self_update = true
 
 # Extra tracing filter directives
@@ -98,15 +96,21 @@
 
 
 [python]
-# enable_pip_review = true                         ###disabled by default
-# enable_pip_review_local = true                   ###disabled by default
-# enable_pipupgrade = true                         ###disabled by default
-# pipupgrade_arguments = "-y -u --pip-path pip"    ###disabled by default
+# (default: false)
+# enable_pip_review = true
+
+# (default: false)
+# enable_pip_review_local = true
+
+# (default: false)
+# enable_pipupgrade = true
+
+# (default: false)
+# pipupgrade_arguments = "-y -u --pip-path pip"
 
 # For the poetry step, by default, Topgrade skips its update if poetry is not
 # installed with the official script. This configuration entry forces Topgrade
 # to run the update in this case.
-#
 # (default: false)
 # poetry_force_self_update = true
 
@@ -170,6 +174,7 @@
 # aura_aur_arguments = "-kx"
 
 # aura_pacman_arguments = ""
+
 # garuda_update_arguments = ""
 
 # show_arch_news = true
@@ -301,11 +306,15 @@
 # use_root = false
 
 # containers = ["archlinux-latest"]
+
+
 [containers]
 # Specify the containers to ignore while updating (Wildcard supported)
 # ignored_containers = ["ghcr.io/rancher-sandbox/rancher-desktop/rdx-proxy:latest", "docker.io*"]
+
 # Specify the runtime to use for containers (default: "docker", allowed values: "docker", "podman")
 # runtime = "podman"
+
 
 [lensfun]
 # If disabled, Topgrade invokes `lensfun‑update‑data` without root privilege,
@@ -314,13 +323,14 @@
 # (default: false)
 # use_sudo = false
 
+
 [julia]
 # If disabled, Topgrade invokes julia with the --startup-file=no CLI option.
-#
 # This may be desirable to avoid loading outdated packages with "using" directives
 # in the startup file, which might cause the update run to fail.
 # (default: true)
 # startup_file = true
+
 
 [zigup]
 # Version strings passed to zigup.
@@ -346,6 +356,7 @@
 # If enabled, each updated version above will be marked with `zigup keep`.
 # (default: false)
 # cleanup = false
+
 
 [vscode]
 # If this is set and is a non-empty string, it specifies the profile the
